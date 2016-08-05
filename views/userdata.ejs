@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<title>Jawbone UP API with Node Demo</title>
+	<img src="images/ods2.png">
+	<style type="text/css">
+		body {
+			
+			background-size: cover;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		h1 {
+			color: #000;
+			font-size: 36px;
+		}
+		.sleep-table {
+			background-color: rgba(f,f,f,0.8);
+			border-collapse: collapse;
+			margin: 0 auto;
+			width: 30%;
+			text-wrap:none;
+		}
+		.sleep-table tr th {
+			background: rgba(200, 200, 200, 1);
+			text-wrap:none;
+		}
+		.sleep-table tr th,
+		.sleep-table tr td {
+			border: 2px solid rgba(0, 0, 0, 1);
+			color: #000;
+			font-weight: normal;
+			padding: 1px 20px;
+			text-wrap:none;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		.btn {
+			background-color: #000000;
+			color: #fff;
+			display: block;
+			font-size: 24px;
+			margin: 30px auto;
+			padding: 10px;
+			text-decoration: none;
+			width: 10%;
+		}
+		.btn:hover {
+			background-color: #000000;
+		}
+	</style>
+</head>
+<body>
+	<h1>Jawbone UP Data</h1>
+	<h1> An ODS Production </h1>
+	<table class="sleep-table">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Sleep time</th>
+				<th>Steps</th>
+				<th>Resting Heart Rate</th>
+			</tr>
+		</thead>
+		<tbody>
+		<% for (var i=0; i<items.length; i++) { %>
+			<tr>
+				<td><%= items[i].date %></td>
+				<td><%= items[i].title %></td>
+				<td><%= jawboneDatamove.items[i].title %></td>
+				
+				
+			</tr>
+		<% } %>
+		</tbody>
+	</table>
+
+	
+	
+	
+	
+	
+	
+	<a href="/logout" class="btn">Log out</a>
+</body>
+</html>
